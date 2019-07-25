@@ -30,12 +30,14 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": ["./node_modules/hammerjs/hammer.min.js"],
+            "scripts": [
+              "./node_modules/hammerjs/hammer.min.js"
+            ],
             "es5BrowserSupport": true
           },
           "configurations": {
             "es5": {
-                "tsConfig": "tsconfig-es5.app.json"
+              "tsConfig": "tsconfig-es5.app.json"
             },
             "production": {
               "fileReplacements": [
@@ -73,7 +75,7 @@
               "browserTarget": "sensorybpardgenerator:build:production"
             },
             "es5": {
-                "browserTarget": "sensorybpardgenerator:build:es5"
+              "browserTarget": "sensorybpardgenerator:build:es5"
             }
           }
         },
@@ -93,7 +95,9 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": ["./node_modules/hammerjs/hammer.min.js"],
+            "scripts": [
+              "./node_modules/hammerjs/hammer.min.js"
+            ],
             "assets": [
               "src/favicon.ico",
               "src/assets"

@@ -1,0 +1,10 @@
+// Import the IgniteUI themes library first
+@import "~igniteui-angular/lib/core/styles/themes/index";
+
+$company-color: #f8c1d9; // pink
+$secondary-color: #b4ddc0; // mint
+
+$my-color-palette: igx-palette(
+  $primary: $company-color,
+  $secondary: $secondary-color
+);

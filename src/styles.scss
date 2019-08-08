@@ -7,6 +7,7 @@
 
 $primary: #731963 !default;
 $secondary: #ce5712 !default;
+$brand-color:  #f8c1d9;
 
 $app-palette: igx-palette($primary, $secondary);
 
@@ -20,3 +21,6 @@ html, body {
 .content p {
   margin: 15px;
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

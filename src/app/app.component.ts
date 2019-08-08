@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NavigationStart, Router } from '@angular/router';
 import { filter } from 'rxjs/operators';
-
+import {MDCTabBar} from '@material/tab-bar';
 import { routes } from './app-routing.module';
 
 import { IgxNavigationDrawerComponent } from 'igniteui-angular';
@@ -31,14 +31,14 @@ export class AppComponent implements OnInit {
   }
 
   public ngOnInit(): void {
-    this.router.events.pipe(
-      filter((x) => x instanceof NavigationStart)
-    )
-      .subscribe((event: NavigationStart) => {
-          if (event.url !== '/' && !this.navdrawer.pin) {
-              // Close drawer when selecting a view on mobile (unpinned)
-              this.navdrawer.close();
-          }
-      });
+    // this.router.events.pipe(
+    //   filter((x) => x instanceof NavigationStart)
+    // )
+    //   .subscribe((event: NavigationStart) => {
+    //       if (event.url !== '/' && !this.navdrawer.pin) {
+    //           // Close drawer when selecting a view on mobile (unpinned)
+    //           this.navdrawer.close();
+    //       }
+    //   });
   }
 }

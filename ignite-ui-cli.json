@@ -1,4 +1,18 @@
 {
+    "igPackageRegistry": "https://packages.infragistics.com/npm/js-licensed/",
+    "customTemplates": [],
+    "skipGit": false,
+    "skipAnalytic": false,
+    "stepByStep": {
+        "frameworks": [
+            "angular"
+        ],
+        "angular": {
+            "projTypes": [
+                "igx-ts"
+            ]
+        }
+    },
     "version": "4.2.3",
     "project": {
         "defaultPort": 4200,

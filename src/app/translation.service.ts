@@ -14,13 +14,19 @@ export class TranslationService {
         bg: {
             language: 'bg',
             values: {
-                    tabAboutLabel: 'За нас'
+                    tabAboutLabel: 'За нас',
+                    tabGallery: 'Галерия',
+                    tabMontessori: 'Монтесори',
+                    tabBlog: 'Блог'
             }
         },
         en: {
             language: 'en',
             values: {
-                tabAboutLabel: 'About us'
+                tabAboutLabel: 'About us',
+                tabGallery: 'Gallery',
+                tabMontessori: 'Montessori',
+                tabBlog: 'Blog'
             }
         }
     };
@@ -30,5 +36,14 @@ export class TranslationService {
         if (this.dictionary[this.language] != null) {
             return this.dictionary[this.language].values[key];
         }
+    }
+
+    public setDefaultLanguage(lang: string) {
+        if (lang && this.languages.find(l => l === lang) !== undefined) {
+            this.language = lang;
+        } else {
+            this.language = 'bg';
+        }
+
     }
 }

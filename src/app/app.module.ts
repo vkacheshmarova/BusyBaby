@@ -16,7 +16,7 @@ import { CommonModule } from '@angular/common';
 import { HeaderCompComponent } from './header-comp/header-comp.component';
 import { TranslatePipe } from './translate.pipe';
 import { TranslationService } from './translation.service';
-import {HttpClientModule, HttpClient, HttpHandler} from '@angular/common/http';
+import {HttpClientModule, HttpClient} from '@angular/common/http';
 import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 
@@ -51,6 +51,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     IgxButtonModule,
     IgxCarouselModule,
     CommonModule,
+    HttpClientModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

@@ -3,9 +3,9 @@ import { NavigationStart, Router } from '@angular/router';
 import { filter } from 'rxjs/operators';
 import {MDCTabBar} from '@material/tab-bar';
 import { routes } from './app-routing.module';
-import {TranslateService} from '@ngx-translate/core';
 
 import { IgxNavigationDrawerComponent } from 'igniteui-angular';
+import { TranslationService } from './translation.service';
 
 
 @Component({
@@ -20,8 +20,9 @@ export class AppComponent implements OnInit {
   }> = [];
   @ViewChild(IgxNavigationDrawerComponent, { static: true }) public navdrawer: IgxNavigationDrawerComponent;
 
-  constructor(private router: Router, private translate: TranslateService) {
-    translate.setDefaultLang('en');
+  constructor(private router: Router, private translate: TranslationService) {
+    translate.setDefaultLanguage('bg');
+
     for (const route of routes) {
       if (route.path && route.data && route.path.indexOf('*') === -1) {
         this.topNavLinks.push({

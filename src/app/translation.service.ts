@@ -1,34 +1,21 @@
-import { Injectable} from '@angular/core';
+import { Injectable } from '@angular/core';
+import { LanguageStrings } from '../assets/i18n/translation';
 
 @Injectable()
-export class TranslationSet {
-  public language: string;
-  public values: { [key: string]: string } = {};
-}
-
 export class TranslationService {
-    public languages = ['bg', 'en'];
-    public language;
+    public languages = [
+        { name: 'bg', selected: true },
+        { name: 'en', selected: false }];
 
-    private dictionary: { [key: string]: TranslationSet} = {
-        bg: {
-            language: 'bg',
-            values: {
-                    tabAboutLabel: 'За нас'
-            }
-        },
-        en: {
-            language: 'en',
-            values: {
-                tabAboutLabel: 'About us'
-            }
-        }
-    };
-    constructor() {}
+    private dictionary;
+    constructor() {
+        this.dictionary = LanguageStrings;
+    }
 
     translate(key: string): string {
-        if (this.dictionary[this.language] != null) {
-            return this.dictionary[this.language].values[key];
+        const currentLanguage = this.languages.filter(l => l.selected)[0].name;
+        if (this.dictionary[currentLanguage] != null) {
+            return this.dictionary[currentLanguage].values[key];
         }
     }
 }

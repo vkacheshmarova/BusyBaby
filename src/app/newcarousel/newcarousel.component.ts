@@ -8,9 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class NewCarouselComponent implements OnInit {
 
   public slides: any[] = [];
-  public interval = 3000;
+  public interval = 5000;
   public pause = false;
-  public loop = false;
+  public loop = true;
   constructor() { }
 
   public ngOnInit() {

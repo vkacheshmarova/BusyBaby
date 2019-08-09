@@ -6,7 +6,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { IgxNavigationDrawerModule, IgxNavbarModule, IgxLayoutModule,
   IgxRippleModule, IgxDragDropModule, IgxTabsModule, IgxCardModule, IgxAvatarModule,
-  IgxButtonModule, IgxCarouselModule } from 'igniteui-angular';
+  IgxButtonModule, IgxButtonGroupModule, IgxCarouselModule, IgxIconModule } from 'igniteui-angular';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { GeneratorComponent } from './generator/generator.component';
@@ -49,6 +49,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     IgxCardModule,
     IgxAvatarModule,
     IgxButtonModule,
+    IgxButtonGroupModule,
+    IgxIconModule,
     IgxCarouselModule,
     CommonModule,
     HttpClientModule,

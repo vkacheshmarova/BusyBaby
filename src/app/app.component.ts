@@ -20,8 +20,8 @@ export class AppComponent implements OnInit {
   }> = [];
   @ViewChild(IgxNavigationDrawerComponent, { static: true }) public navdrawer: IgxNavigationDrawerComponent;
 
-  constructor(private router: Router, private translate: TranslationService) {
-    translate.setDefaultLanguage('bg');
+  constructor(private router: Router) {
+    // translate.setDefaultLanguage('en');
 
     for (const route of routes) {
       if (route.path && route.data && route.path.indexOf('*') === -1) {

@@ -14,4 +14,7 @@ export class MenuTabComponent implements OnInit {
 
   public ngOnInit() {
   }
+  selectPart(part: string) {
+     console.log('clicked on part' + part);
+}
 }

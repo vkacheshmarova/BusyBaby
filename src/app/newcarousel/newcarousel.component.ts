@@ -19,8 +19,10 @@ export class NewCarouselComponent implements OnInit {
 
   public addNewSlide() {
     this.slides.push(
-      { image: 'assets/bb4.jpg' },
-      { image: 'assets/bb5.jpg' },
+      { image: 'assets/BusyBaby.png' },
+      { image: 'assets/BusyBaby2.png' },
+      { image: 'assets/BusyBaby.png' },
+      // { image: 'assets/bb4.jpg' },
       // { image: 'assets/slide3@x2.jpg' },
       // { image: 'assets/slide4@x2.jpg' }
     );

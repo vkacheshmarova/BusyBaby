@@ -1,17 +1,54 @@
 <div class="content">
-<igx-tabs>
+ <igx-tabs>
 	<igx-tabs-group label="{{ 'tabAboutLabel' | translate }}" icon="child_care" class="tab-header igx-typography__caption">
 		<app-newcarousel></app-newcarousel>
 	</igx-tabs-group>
 	<igx-tabs-group label="{{'tabGallery' | translate}}" icon="photo_album">
 			<div style="margin: 10px 3px 3px 1px">
 			</div>
-		  </igx-tabs-group>
-	<igx-tabs-group label="{{'tabMontessori' | translate}}" icon="info">
-	 <app-newcarousel></app-newcarousel>
 	</igx-tabs-group>
-	<igx-tabs-group label="{{'tabBlog' | translate}}" icon="mode_comment">
-	 <app-newcarousel></app-newcarousel>
+	<igx-tabs-group label="{{'tabAboutBB' | translate}}" icon="home">
+			<div style="margin: 10px 3px 3px 1px">
+					<img [src]="'assets/aboutBB.jpg'" class="center" usemap="#image-map">
+					<map name="image-map">
+							<area target="" alt="switch" title="switch" href="" coords="21,1466,449,1877" shape="rect" (click)='selectPath(switch)'>
+							<area  alt="button" title="button" href="" coords="607,1310,1062,1667" shape="rect">
+							<area  alt="latch" title="latch" href="" coords="1120,1376,1571,1630,441,784,1009,1159,523,830,1186,1253" shape="rect">
+							<area alt="doors" title="doors" href="" coords="448,811,1182,1268" shape="rect">
+							<area alt="velcro/zip" title="velcro/zip" href="" coords="84,785,437,1429" shape="rect">
+							<area  alt="spinner_small" title="spinner_small" href="" coords="1281,941,1509,1169" shape="rect">
+							<area  alt="abacus" title="abacus" href="" coords="312,572,1310,675" shape="rect">
+							<area  alt="spinner_big" title="spinner_big" href="" coords="640,165,1001,496" shape="rect">
+						</map>
+			</div>
+	</igx-tabs-group>
+	<igx-tabs-group label="{{'tabMontessori' | translate}}" icon="info">
+			<div class="card-wrapper">
+					<igx-card type="outlined">
+							<igx-card-media height="250px">
+								<img [src]="'assets/Montessori.jpg'">
+							</igx-card-media>
+					
+							<igx-card-header>
+								<h3 igxCardHeaderTitle>{{'tabMontessori' | translate}} и Busy Baby</h3>
+							</igx-card-header>
+					
+							<igx-card-content>
+								<p style="text-align:right;">"Free the child’s potential,<br>and you will transform him into the world!<br> M. Montessori" </p>
+								<igx-divider class="content-divider"></igx-divider>
+								<p>{{'montessoriTextP1' | translate }}</p><br>
+								<p>{{'montessoriTextP2' | translate }}</p><a href="http://www.highviewart.com/cvetno/zlatnite-printsipi-na-mariya-montesori-za-vazpitanieto-na-deteto-3723.html" target="_blank"><span>{{'montessoriLink' | translate }}</span></a><br>
+								<p><b>{{'montessoriTextP3' | translate }}</b></p><br>
+								<p>{{'montessoriTextP4' | translate }}</p><br>
+								<p>{{'montessoriTextP5' | translate }}</p><br>
+								<p>{{'montessoriTextP6' | translate }}</p><br>
+								<p>{{'montessoriTextP7' | translate }}</p><br>
+							</igx-card-content>
+					</igx-card>
+					</div>
+	</igx-tabs-group>
+	<igx-tabs-group label="{{'tabContacts' | translate}}" icon="contact_phone">
+			<app-contacts></app-contacts>
 	</igx-tabs-group>
 </igx-tabs>
 </div>

@@ -33,3 +33,27 @@ $my-custom-tabs-theme: igx-tabs-theme(
         
     }
 }
+.content-divider {
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+}
+.card-wrapper {
+    align-self: auto;
+    //max-width: 800px;
+    min-width: 300px;
+    //max-height: 500px;
+    margin: auto;
+    width: 50%;
+    padding-top: 20px;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    //max-height: 800px;
+    //min-width: 500px;
+  }
+// .p {
+//     padding-top: 5px;
+// }

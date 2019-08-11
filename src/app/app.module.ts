@@ -6,7 +6,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { IgxNavigationDrawerModule, IgxNavbarModule, IgxLayoutModule,
   IgxRippleModule, IgxDragDropModule, IgxTabsModule, IgxCardModule, IgxAvatarModule,
-  IgxButtonModule, IgxButtonGroupModule, IgxCarouselModule, IgxIconModule } from 'igniteui-angular';
+  IgxButtonModule, IgxButtonGroupModule, IgxCarouselModule, IgxIconModule, IgxCardComponent, IgxDividerModule } from 'igniteui-angular';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { GeneratorComponent } from './generator/generator.component';
@@ -19,6 +19,7 @@ import { TranslationService } from './translation.service';
 import {HttpClientModule, HttpClient} from '@angular/common/http';
 import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import { ContactsComponent } from './contacts/contacts.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -32,7 +33,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     MenuTabComponent,
     NewCarouselComponent,
     HeaderCompComponent,
-    TranslatePipe
+    TranslatePipe,
+    ContactsComponent
   ],
   imports: [
     MatTabsModule,
@@ -47,6 +49,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     IgxDragDropModule,
     IgxTabsModule,
     IgxCardModule,
+    IgxDividerModule,
     IgxAvatarModule,
     IgxButtonModule,
     IgxButtonGroupModule,

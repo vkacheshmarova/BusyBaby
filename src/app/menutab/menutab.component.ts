@@ -9,12 +9,13 @@ import {TranslateService} from '@ngx-translate/core';
   styleUrls: ['./menutab.component.scss']
 })
 export class MenuTabComponent implements OnInit {
-
+  boardParts: any[];
   constructor(private translationService: TranslationService) { }
 
   public ngOnInit() {
+    this.boardParts = [
+      { name: 'spinnerBig', pic: '../../assets/elements/spinner_big.jpg', description: 'spinnerBigDesc'},
+      { name: 'Latch', pic: '', description: 'HHHH'}
+    ];
   }
-  selectPart(part: string) {
-     console.log('clicked on part' + part);
-}
 }

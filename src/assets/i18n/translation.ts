@@ -12,6 +12,8 @@ export const LanguageStrings: { [key: string]: TranslationSet} = {
                 tabAboutBB: 'За продукта',
                 tabMontessori: 'Монтесори',
                 tabContacts: 'Контакти',
+                spinnerBig: 'Дървено колелце',
+                spinnerBigDesc: "Въртящо кръгче изработено от дърво. Подобрява връзката око ръка и концентрацията.",
                 contactUsText: 'Ако имате въпрос, искате да поръчате някое от нашите табла или имате идея за свое собствено,не се колебайте да се свържете с нас, с радост ще отговорим на всичките ви въпроси.',
                 montessoriTextP1: 'Всеки родител мечтае детето му да развие своя потенциал, като същевременно се забавлява и расте спокойно и уверено в собствените си способности. В съвременната система на обучение и възпитание има редица методи, чрез които това може да бъде постигнато. Но има един по-нестандартен, който се отличава от останалите - методът Монтесори.',
                 montessoriTextP2: 'Създателят на този интересен метод е д-р Мария Монтесори - италианска лекарка и световноизвестна педагожка. Тя извежда 19 принципа, които са водещи за успеха на метода Монтесори. Ние ще се спрем на първия, на който всъщност се основават нашите сензорни табла Busy Baby, а останалите може да прочетете ',
@@ -32,6 +34,8 @@ export const LanguageStrings: { [key: string]: TranslationSet} = {
             tabGallery: 'Gallery',
             tabMontessori: 'Montessori',
             tabContacts: 'Contacts',
+            spinnerBig: 'Spinner',
+            spinnerBigDesc: "Въртящо кръгче изработено от дърво. Подобрява връзката око ръка и концентрацията.",
             contactUsText: 'In case that you have a question, you would like to order any of or boards or have an idea for your own, customized board, do not hesitate to ocntact us. We would be glad to help you.'
         }
     }

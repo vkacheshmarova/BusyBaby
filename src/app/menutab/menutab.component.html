@@ -3,16 +3,16 @@
 	<igx-tabs-group label="{{ 'tabAboutLabel' | translate }}" icon="child_care" class="tab-header igx-typography__caption">
 		<app-newcarousel></app-newcarousel>
 	</igx-tabs-group>
-	<igx-tabs-group label="{{'tabGallery' | translate}}" icon="photo_album">
+	<!-- <igx-tabs-group label="{{'tabGallery' | translate}}" icon="photo_album">
 			<div style="margin: 10px 3px 3px 1px">
 			</div>
-	</igx-tabs-group>
+	</igx-tabs-group> -->
 	<igx-tabs-group label="{{'tabAboutBB' | translate}}" icon="home">
 			<div style="margin: 10px 3px 3px 1px">
-					<div class="layout-box" igxLayout igxLayoutDir="row">
-							<div *ngFor="let part of boardParts" class="layout-box__el" igxFlex igxFlexGrow="0">
+					<div class="layout-box" igxLayout igxLayoutDir="column">
+							<div *ngFor="let part of boardParts" class="layout-box__el" igxFlex igxFlexGrow="0" class="card-wrapper">
 									<igx-card type="outlined">
-											<igx-card-media height="250px">
+											<igx-card-media >
 												<img src="{{part.pic}}">
 											</igx-card-media>
 											<igx-card-header>

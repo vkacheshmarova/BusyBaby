@@ -9,7 +9,6 @@ import { IgxNavigationDrawerModule, IgxNavbarModule, IgxLayoutModule,
   IgxButtonModule, IgxButtonGroupModule, IgxCarouselModule, IgxIconModule, IgxCardComponent, IgxDividerModule } from 'igniteui-angular';
 import { AppComponent } from './app.component';
 import { GeneratorComponent } from './generator/generator.component';
-import { NewCarouselComponent } from './newcarousel/newcarousel.component';
 import { CommonModule } from '@angular/common';
 import { HeaderCompComponent } from './header-comp/header-comp.component';
 import { TranslatePipe } from './translate.pipe';
@@ -38,7 +37,6 @@ export function HttpLoaderFactory(http: HttpClient) {
   declarations: [
     AppComponent,
     GeneratorComponent,
-    NewCarouselComponent,
     HeaderCompComponent,
     TranslatePipe,
     ContactsComponent,

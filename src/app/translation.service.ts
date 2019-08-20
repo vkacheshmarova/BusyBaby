@@ -4,8 +4,8 @@ import { LanguageStrings } from '../assets/i18n/translation';
 @Injectable()
 export class TranslationService {
     public languages = [
-        { name: 'bg', selected: true },
-        { name: 'en', selected: false }];
+        { name: 'bg', displayText: 'БГ', selected: true },
+        { name: 'en', displayText: 'EN', selected: false }];
 
     private currentLanguage = 'bg';
     private dictionary;

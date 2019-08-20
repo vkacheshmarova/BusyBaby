@@ -67,6 +67,8 @@ export class AppComponent implements OnInit {
   }
 
   lang(event) {
-    this.translationService.setCurrentLanguage(event.srcElement.textContent);
+    this.translationService.setCurrentLanguage(event.srcElement.id);
+    this.languages.find(l => l.name === event.srcElement.id).selected = true;
+    this.languages.find(l => l.name !== event.srcElement.id).selected = false;
   }
 }

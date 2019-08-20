@@ -1,12 +1,14 @@
 <div igxLayout>
   <igx-nav-drawer #nav id="project-menu" [isOpen]='false' [enableGestures]="false" width="220px" [pin]='true'
-    [position]="'right'" >
+    [position]="'right'">
     <ng-template igxDrawer>
       <span igxDrawerItem [isHeader]="true">
         <span>BUSY BABY</span>
         <span class="localizationButtons">
-          <igx-icon class="igxIcon" (click)="lang($event)">BG</igx-icon>
-          <igx-icon class="igxIcon" (click)="lang($event)">EN</igx-icon>
+          <igx-icon class="igxIcon" (click)="lang($event)" *ngFor="let ln of languages">
+            <span [id]="ln.name" [style.color]="ln.selected ? 'blue' : null">{{ln.displayText}}
+            </span>
+          </igx-icon>
         </span>
       </span>
       <span *ngFor="let route of topNavLinks" igxDrawerItem routerLinkActive="igx-nav-drawer__item--active"
@@ -30,13 +32,16 @@
       <ul class="headerItems" fxShow="true" fxHide.lt-md="true">
         <li *ngFor="let route of topNavLinks" (click)="selectionChange(route)">
           <igx-icon>{{route.icon}}</igx-icon>
-          <span class="icon-text" [style.color]="route.selected ? 'pink' : null"
-                >{{route.name | translate}}</span>
+          <span class="icon-text" [style.color]="route.selected ? 'pink' : null">{{route.name | translate}}</span>
         </li>
       </ul>
 
-      <igx-icon class="igxIcon" fxShow="true" fxHide.lt-md="true" (click)="lang($event)">BG</igx-icon>
-      <igx-icon class="igxIcon" fxShow="true" fxHide.lt-md="true" (click)="lang($event)">EN</igx-icon>
+      <span>
+        <igx-icon *ngFor="let l of languages" class="igxIcon" fxShow="true" fxHide.lt-md="true" (click)="lang($event)">
+          <span [id]="l.name" [style.color]="l.selected ? 'blue' : null">{{l.displayText}}
+          </span>
+        </igx-icon>
+      </span>
     </igx-navbar>
 
     <div class="content">

@@ -8,9 +8,7 @@ import { IgxNavigationDrawerModule, IgxNavbarModule, IgxLayoutModule,
   IgxRippleModule, IgxDragDropModule, IgxTabsModule, IgxCardModule, IgxAvatarModule,
   IgxButtonModule, IgxButtonGroupModule, IgxCarouselModule, IgxIconModule, IgxCardComponent, IgxDividerModule } from 'igniteui-angular';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
 import { GeneratorComponent } from './generator/generator.component';
-import { MenuTabComponent } from './menutab/menutab.component';
 import { NewCarouselComponent } from './newcarousel/newcarousel.component';
 import { CommonModule } from '@angular/common';
 import { HeaderCompComponent } from './header-comp/header-comp.component';
@@ -20,6 +18,17 @@ import {HttpClientModule, HttpClient} from '@angular/common/http';
 import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import { ContactsComponent } from './contacts/contacts.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
+import { AboutbbComponent } from './aboutbb/aboutbb.component';
+import { MontessoriComponent } from './montessori/montessori.component';
+import { FlexLayoutModule} from '@angular/flex-layout';
+import {
+  MatButtonModule,
+  MatIconModule,
+  MatListModule,
+  MatSidenavModule,
+  MatToolbarModule
+} from '@angular/material';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -28,17 +37,24 @@ export function HttpLoaderFactory(http: HttpClient) {
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
     GeneratorComponent,
-    MenuTabComponent,
     NewCarouselComponent,
     HeaderCompComponent,
     TranslatePipe,
-    ContactsComponent
+    ContactsComponent,
+    AboutusComponent,
+    AboutbbComponent,
+    MontessoriComponent
   ],
   imports: [
     MatTabsModule,
     FormsModule,
+    MatIconModule,
+    MatListModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatButtonModule,
+    FlexLayoutModule,
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,

@@ -7,15 +7,21 @@ export class TranslationService {
         { name: 'bg', selected: true },
         { name: 'en', selected: false }];
 
+    private currentLanguage = 'bg';
     private dictionary;
     constructor() {
         this.dictionary = LanguageStrings;
     }
 
+    public setCurrentLanguage(lang: string) {
+        if (lang !== null && (lang.toLowerCase() === 'en' || lang.toLowerCase() === 'bg')) {
+            this.currentLanguage = lang.toLowerCase();
+        }
+    }
+
     translate(key: string): string {
-        const currentLanguage = this.languages.filter(l => l.selected)[0].name;
-        if (this.dictionary[currentLanguage] != null) {
-            return this.dictionary[currentLanguage].values[key];
+        if (this.dictionary[this.currentLanguage] != null) {
+            return this.dictionary[this.currentLanguage].values[key];
         }
     }
 }

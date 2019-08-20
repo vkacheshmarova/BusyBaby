@@ -1,18 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { TranslationService } from './../translation.service';
-import {TranslatePipe } from './../translate.pipe';
-import {TranslateService} from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-menutab',
-  templateUrl: './menutab.component.html',
-  styleUrls: ['./menutab.component.scss']
+  selector: 'app-aboutbb',
+  templateUrl: './aboutbb.component.html',
+  styleUrls: ['./aboutbb.component.scss']
 })
-export class MenuTabComponent implements OnInit {
+export class AboutbbComponent implements OnInit {
   boardParts: any[];
-  constructor(private translationService: TranslationService) { }
+  constructor() { }
 
-  public ngOnInit() {
+  ngOnInit() {
     this.boardParts = [
       { name: 'spinnerBig', pic: '../../assets/elements/spinner_big.jpg', description: 'spinnerBigDesc'},
       { name: 'abacus', pic: '../../assets/elements/abacus.jpg', description: 'abacusDesc'},
@@ -24,4 +21,5 @@ export class MenuTabComponent implements OnInit {
       { name: 'latchChain', pic: '../../assets/elements/latch.jpg', description: 'latchChainDesc'}
     ];
   }
+
 }

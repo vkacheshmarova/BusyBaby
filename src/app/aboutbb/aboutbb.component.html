@@ -1,0 +1,17 @@
+<div style="margin: 10px 3px 3px 1px">
+    <div class="layout-box" igxLayout igxLayoutDir="column">
+            <div *ngFor="let part of boardParts" class="layout-box__el" igxFlex igxFlexGrow="0" class="card-wrapper">
+                    <igx-card type="outlined">
+                            <igx-card-media >
+                                <img src="{{part.pic}}">
+                            </igx-card-media>
+                            <igx-card-header>
+                                <h3 igxCardHeaderTitle>{{part.name | translate}}</h3>
+                            </igx-card-header>
+                            <igx-card-content>
+                                <p style="text-align:center;"> {{part.description | translate}} </p>
+                            </igx-card-content>
+                    </igx-card>
+            </div>
+    </div>
+</div>

@@ -1,21 +1,25 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HomeComponent } from './home/home.component';
 import { GeneratorComponent } from './generator/generator.component';
 
 import { PageNotFoundComponent } from './error-routing/not-found/not-found.component';
 import { UncaughtErrorComponent } from './error-routing/error/uncaught-error.component';
 import { ErrorRoutingModule } from './error-routing/error-routing.module';
-import { MenuTabComponent } from './menutab/menutab.component';
 import { NewCarouselComponent } from './newcarousel/newcarousel.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
+import { AboutbbComponent } from './aboutbb/aboutbb.component';
+import { MontessoriComponent } from './montessori/montessori.component';
+import { TranslationService } from './translation.service';
+import { TranslatePipe } from './translate.pipe';
+import { ContactsComponent } from './contacts/contacts.component';
 
 export const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent, data: { text: 'Home' } },
-  { path: 'gnerator', component: GeneratorComponent, data: { text: 'Generator' } },
+  { path: '', redirectTo: '/about', pathMatch: 'full' },
+  { path: 'about', component: AboutusComponent, data: { text: 'tabAboutLabel', icon: 'child_care' } },
+  { path: 'aboutproduct', component: AboutbbComponent, data: { text: 'tabAboutBB' , icon: 'home'} },
+  { path: 'montessori', component: MontessoriComponent, data: { text: 'tabMontessori', icon: 'info'  } },
+  { path: 'contacts', component: ContactsComponent, data: { text: 'tabContacts', icon: 'contact_phone' } },
   { path: 'error', component: UncaughtErrorComponent },
-  { path: 'menutab', component: MenuTabComponent, data: { text: 'menuTab' } },
-  { path: 'newcarousel', component: NewCarouselComponent, data: { text: 'newCarousel' } },
   { path: '**', component: PageNotFoundComponent } // must always be last
 ];
 
@@ -24,4 +28,8 @@ export const routes: Routes = [
   exports: [RouterModule, ErrorRoutingModule]
 })
 export class AppRoutingModule {
+
+  constructor() {
+
+  }
 }

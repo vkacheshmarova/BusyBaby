@@ -1,3 +1,29 @@
+@import '../../node_modules/igniteui-angular/lib/core/styles/themes/index';
+$my-custom-button-theme: igx-button-group-theme(
+  $item-text-color: #f8c1d9,
+  $item-hover-text-color: #f8c1d9,
+  $item-selected-text-color: #f8c1d9,
+  $item-selected-background: #cac1c5
+  
+  // $item-background: transparent,
+  // $item-hover-background: red,
+  // $disabled-text-color: gray,
+  // $disabled-background-color: lightgray
+);
+
+$my-custom-navbar-theme: igx-navbar-theme(
+  $background: white,
+  $idle-icon-color: #f8c1d9,
+    $hover-icon-color: #f8c1d9
+);
+
+:host {
+    ::ng-deep {
+        @include igx-button-group ($my-custom-button-theme);
+        @include igx-navbar ($my-custom-navbar-theme);
+
+    }
+}
 
 :host > div {
   height: 100%;
@@ -9,13 +35,49 @@
   flex-flow: row nowrap;
   justify-content: center;
   align-items: stretch;
-  padding: 0 24px;
   overflow: auto;
 }
 
-@media only screen and (max-width: 1024px) {
-  .content {
-    padding: 0 15px;
-    justify-content: flex-start;
-  }
+.headerItems {
+  margin-top: 5px;
 }
+
+.headerItems li {
+  display:inline;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.headerText {
+  margin-left: 4px;
+}
+
+.igxIcon {
+  font-size: 13px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.right {
+  position: absolute;
+  right: 0px;
+  margin-right: 10px;
+}
+
+
+.icon-text {
+  position: relative;
+  top: -5px;
+  margin-left: 3px;
+}
+
+.localizationButtons {
+  position: absolute;
+  right: 5px;
+}
+
+.logo {
+  height: 56px;
+  cursor: pointer;
+}
+

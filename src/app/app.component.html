@@ -1,16 +1,80 @@
-<app-header-comp></app-header-comp>
-<app-menutab></app-menutab>
-<!-- <div igxLayout>
-  <igx-nav-drawer #nav id="project-menu" isOpen='false' [enableGestures]='true' width="280px">
+<div igxLayout>
+  <igx-nav-drawer #nav id="project-menu" [isOpen]='false' [enableGestures]="false" width="220px" [pin]='true'
+    [position]="'right'">
     <ng-template igxDrawer>
-      <span igxDrawerItem [isHeader]="true">Views</span>
-      <span *ngFor="let route of topNavLinks" igxDrawerItem igxRipple routerLinkActive="igx-nav-drawer__item--active" routerLink="{{route.path}}">{{route.name}}</span>
+      <span igxDrawerItem [isHeader]="true">
+        <span>BUSY BABY</span>
+        <span class="localizationButtons">
+          <igx-icon class="igxIcon" (click)="lang($event)">BG</igx-icon>
+          <igx-icon class="igxIcon" (click)="lang($event)">EN</igx-icon>
+        </span>
+      </span>
+      <span *ngFor="let route of topNavLinks" igxDrawerItem routerLinkActive="igx-nav-drawer__item--active"
+        routerLink="{{route.path}}" (click)="navigate(route)">
+        <igx-icon fontSet="material">{{route.icon}}</igx-icon>
+        <span>{{route.name | translate}}</span>
+      </span>
     </ng-template>
   </igx-nav-drawer>
+
   <div igxFlex igxLayout igxLayoutDir="columns">
-    <igx-navbar title="SensoryBoardGenerator" actionButtonIcon="menu" (onAction)="nav.toggle()"></igx-navbar>
-    <div class="content" igxFlex>
+    <igx-navbar title="{{selectedItem.name | translate}}">
+      <igx-action-icon>
+        <img src="assets/logo.jpg" alt="logo" class="logo" height="20px" (click)="logoClick()" />
+      </igx-action-icon>
+
+      <igx-action-icon fxShow="true" fxHide.gt-sm class="right">
+        <igx-icon fontSet="material" (click)="nav.toggle()">menu</igx-icon>
+      </igx-action-icon>
+
+      <ul class="headerItems" fxShow="true" fxHide.lt-md="true">
+        <li *ngFor="let route of topNavLinks" (click)="selectionChange(route)">
+          <igx-icon>{{route.icon}}</igx-icon>
+          <span class="icon-text">{{route.name | translate}}</span>
+        </li>
+      </ul>
+
+      <igx-icon class="igxIcon" fxShow="true" fxHide.lt-md="true" (click)="lang($event)">BG</igx-icon>
+      <igx-icon class="igxIcon" fxShow="true" fxHide.lt-md="true" (click)="lang($event)">EN</igx-icon>
+    </igx-navbar>
+
+    <div class="content">
       <router-outlet></router-outlet>
-     </div>
+    </div>
   </div>
-</div> -->
+</div>
+
+
+
+<!-- <div style="height: 100vh;">
+  <mat-toolbar color="primary">
+    <mat-toolbar-row class="matToolbar">
+      <button mat-icon-button (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm class="right">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>
+        <img src="../assets/BusyBabySticker.png" class="logoImage">
+      </span>
+      <span class="example-spacer"></span>
+      <div fxShow="true" fxHide.lt-md="true" class="menuItems" *ngFor="let route of topNavLinks">
+        <a href="{{route.path}}" mat-button>
+          <mat-icon>{{route.icon}}</mat-icon>
+          <span>{{route.name | translate}}</span>
+        </a>
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+  <mat-sidenav-container fxFlexFill>
+    <mat-sidenav #sidenav mode="over" position="end">
+      <mat-nav-list *ngFor="let route of topNavLinks">
+        <a href="{{route.path}}" mat-list-item>
+          <mat-icon>{{route.icon}}</mat-icon>
+          {{route.name | translate}}
+        </a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content fxFlexFill>
+      
+    </mat-sidenav-content>
+  </mat-sidenav-container> -->

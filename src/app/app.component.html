@@ -1,6 +1,6 @@
 <div igxLayout>
   <igx-nav-drawer #nav id="project-menu" [isOpen]='false' [enableGestures]="false" width="220px" [pin]='true'
-    [position]="'right'">
+    [position]="'right'" >
     <ng-template igxDrawer>
       <span igxDrawerItem [isHeader]="true">
         <span>BUSY BABY</span>
@@ -18,19 +18,20 @@
   </igx-nav-drawer>
 
   <div igxFlex igxLayout igxLayoutDir="columns">
-    <igx-navbar title="{{selectedItem.name | translate}}">
+    <igx-navbar>
       <igx-action-icon>
-        <img src="assets/logo.jpg" alt="logo" class="logo" height="20px" (click)="logoClick()" />
+        <img src="assets/logo.jpg" alt="logo" class="logo" (click)="logoClick()" />
       </igx-action-icon>
 
-      <igx-action-icon fxShow="true" fxHide.gt-sm class="right">
+      <igx-action-icon fxHide="true" fxShow.lt-md="true" class="right">
         <igx-icon fontSet="material" (click)="nav.toggle()">menu</igx-icon>
       </igx-action-icon>
 
       <ul class="headerItems" fxShow="true" fxHide.lt-md="true">
         <li *ngFor="let route of topNavLinks" (click)="selectionChange(route)">
           <igx-icon>{{route.icon}}</igx-icon>
-          <span class="icon-text">{{route.name | translate}}</span>
+          <span class="icon-text" [style.color]="route.selected ? 'pink' : null"
+                >{{route.name | translate}}</span>
         </li>
       </ul>
 

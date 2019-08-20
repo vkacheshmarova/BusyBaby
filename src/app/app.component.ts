@@ -51,7 +51,6 @@ export class AppComponent implements OnInit {
     this.selectedItem = route;
     this.topNavLinks.forEach(i => i.selected = false);
     this.topNavLinks.find(i => i.name === route.name).selected = true;
-    this.cdr.detectChanges();
     this.navdrawer.toggle();
 
   }
@@ -61,15 +60,13 @@ export class AppComponent implements OnInit {
     this.selectedItem = route;
     this.topNavLinks.forEach(i => i.selected = false);
     this.topNavLinks.find(i => i.name === route.name).selected = true;
-    this.cdr.detectChanges();
   }
 
   logoClick() {
     this.router.navigateByUrl('/about');
   }
 
-  lang(event: MouseEvent) {
-    console.log(event.srcElement.textContent);
+  lang(event) {
     this.translationService.setCurrentLanguage(event.srcElement.textContent);
   }
 }

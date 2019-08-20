@@ -64,10 +64,13 @@ $my-custom-navbar-theme: igx-navbar-theme(
   margin-right: 10px;
 }
 
+// .menu-icon {
+//   font-size: 30px;
+// }
 
 .icon-text {
   position: relative;
-  top: -5px;
+  top: -5.5px;
   margin-left: 3px;
 }
 
@@ -79,5 +82,9 @@ $my-custom-navbar-theme: igx-navbar-theme(
 .logo {
   height: 56px;
   cursor: pointer;
+}
+
+.selected {
+  color: red;
 }
 

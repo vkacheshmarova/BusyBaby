@@ -30,9 +30,6 @@ $my-custom-navbar-theme: igx-navbar-theme(
 }
 
 .content {
-  width: 100%;
-  display: flex;
-  flex-flow: row nowrap;
   justify-content: center;
   align-items: stretch;
   overflow: auto;
@@ -46,6 +43,12 @@ $my-custom-navbar-theme: igx-navbar-theme(
   display:inline;
   margin-left: 20px;
   cursor: pointer;
+}
+
+.footer {
+  background: yellow;
+  height: 100px;
+  width: 100%;
 }
 
 .headerText {
@@ -84,3 +87,6 @@ $my-custom-navbar-theme: igx-navbar-theme(
   cursor: pointer;
 }
 
+.router {
+  margin-bottom: -100px;
+}

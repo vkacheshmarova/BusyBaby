@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('SensoryBpardGenerator App', () => {
+describe('sensoryboardgenerator App', () => {
   let page: AppPage;
 
   beforeEach(() => {
@@ -9,7 +9,7 @@ describe('SensoryBpardGenerator App', () => {
 
   it('should display project name in navigation', () => {
     page.navigateTo();
-    expect(page.getNavText()).toEqual('SensoryBpardGenerator');
+    expect(page.getNavText()).toEqual('sensoryboardgenerator');
   });
 
   it('should display welcome message', () => {
